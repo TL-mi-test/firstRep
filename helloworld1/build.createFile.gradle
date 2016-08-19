@@ -1,0 +1,8 @@
+import org.apache.tools.ant.filters.*
+ 
+task build(type: Copy) {
+  from 'src'
+  into buildDir
+  include '**/*.html'
+  filter(ReplaceTokens, tokens: [username: System.properties['user.name']])
+}
