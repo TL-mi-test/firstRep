@@ -13,5 +13,5 @@ buildscript {
 
 flyway {
 	user = 'SA'
-	url = 'jdbc:hsqldb:file:../hsqldb/data/TEST'
+	url = 'jdbc:hsqldb:hsql://localhost/'
 }

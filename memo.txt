@@ -1,0 +1,2 @@
+gradle + flyway + hsqldb
+→javaのプロセスが2つ立ち上がり、片方がhsqldbのロックファイルをつかむことでデッドロック状態になっている？
