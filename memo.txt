@@ -1,3 +1,27 @@
+Eclipse Groovy + Gradle + SpringBoot
+
+[Java]EclipseでSpring Bootを使ってみる。
+http://dev.classmethod.jp/server-side/java/using_spring_boot_1/
+
+EclipseでGroovy+Gradle環境を作る
+http://vegetable-it.hateblo.jp/entry/2015/11/07/Eclipse%E3%81%A7Groovy%2BGradle%E7%92%B0%E5%A2%83%E3%82%92%E4%BD%9C%E3%82%8B
+
+FlywayとSpring Bootの連携
+http://dev.classmethod.jp/server-side/flyway-with-spring-boot/
+
+---
+
+Bootstrap
+http://techacademy.jp/magazine/6270
+…どちらかというと自分用？
+http://www.tohoho-web.com/ex/bootstrap.html
+
+---
+
+GitHub
+
+https://github.com/TL-mi-test/firstRep
+
 ---
 gradle + flyway + hsqldb
 →javaのプロセスが2つ立ち上がり、片方がhsqldbのロックファイルをつかむことでデッドロック状態になっている？
