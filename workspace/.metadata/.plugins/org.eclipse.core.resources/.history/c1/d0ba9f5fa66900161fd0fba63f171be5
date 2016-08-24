@@ -1,0 +1,66 @@
+package com.example;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class HelloController {
+
+    @Autowired
+    MyDataRepository repository;
+
+    @RequestMapping("/hello")
+    public String index(Model model) {
+
+        Iterable<Table2> listData = repository.findSpecifiedData(1);
+
+//        Iterable<Table2> list = repository.findById(1);
+//        Iterable<Table2> list = repository.findAll();
+
+        int listCount = 0;
+        listData.forEach(listCount++);
+       model.addAttribute("dataSize", listCount);
+//        return "index";
+/*    	ArrayList<ViewData> list = new ArrayList<ViewData>();
+        for (int i = 0; i < listSize; i++) {
+            ViewData data = new ViewData();
+ //           StringBuffer buffer = new StringBuffer();
+//            buffer.append("メッセージ");
+//            buffer.append(i);
+            data.setNo((Table2)(listData.get(i)).getId());
+            data.setMessage(listData.get(i).getValue());
+            list.add(data);
+        }
+*/
+        model.addAttribute("msg", listData);
+
+        return "index";
+    }
+}
+
+class ViewData {
+    private int no;
+    private String message;
+
+    public int getNo() {
+        return no;
+    }
+
+    public void setNo(int no) {
+        this.no = no;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String toString() {
+        return message;
+    }
+}

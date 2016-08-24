@@ -1,1 +1,5 @@
-workspace 
+*.class
+*.jar
+*.bak
+*~
+~*

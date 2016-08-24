@@ -1,0 +1,13 @@
+package com.example;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface MyDataRepository
+        extends JpaRepository<Table2, Integer> {
+	@Query("SELECT id,table1id,value FROM TABLE2 WHERE id = 2")
+	Iterable <Table2> findById();
+
+}

@@ -1,0 +1,51 @@
+package com.example;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+//import javax.persistence.NamedQuery;
+
+@Entity
+//@NamedQuery(name = "TestData.findAllData", query="select id,table1Id,value from TEST_DATA")
+public class TestData {
+	@Id
+	@GeneratedValue
+	protected Integer id;
+	protected Integer table1Id;
+	protected String value;
+
+	public TestData() {
+		super();
+	}
+
+	public TestData(Integer table1Id, String value){
+		super();
+		this.setTableId(table1Id);
+		this.setValue(value);
+
+	}
+
+	public void setId (Integer id){
+		this.id = id;
+	}
+
+	public Integer getId () {
+		return this.id;
+	}
+
+	public void setTableId (Integer tableId){
+		this.table1Id = tableId;
+	}
+
+	public Integer getTableId (){
+		return this.table1Id;
+	}
+
+	public void setValue (String value){
+		this.value = value;
+	}
+
+	public String getValue (){
+		return this.value;
+	}
+}
