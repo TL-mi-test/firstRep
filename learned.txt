@@ -1,0 +1,21 @@
+○Git
+…Excel参照
+
+○Spring Boot
+…簡単なアプリケーションの作成
+　→DB(hsqldb)にJPAで接続してデータを取得し表示するアプリケーションの作成
+　※ビルドの設定はgradleで記述/bootstrapでごく簡単な表示のカスタマイズ
+
+○flyway
+…flyway単体でのbaseline/info/migration/cleanなど各コマンドの実行
+
+○gradle
+…簡単なタスクの作成
+
+Spring Boot/flyway/gradleの連携
+●gradle + flyway
+…flywayのmigrationタスクをgradleから実行
+　→タスクの起動自体は成功したが、タスクが途中でフリーズしてしまう現象を修正できず
+●Spring Boot + gradle + flyway
+…Spring Bootでflywayのmigrationタスクを実行するアプリケーションの作成
+　→上記同様タスクが途中でフリーズしてしまう現象を修正できず

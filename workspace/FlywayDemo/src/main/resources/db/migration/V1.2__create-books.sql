@@ -1,0 +1,4 @@
+create table books (
+    isbn text primary key,
+    book_name text not null,
+);
