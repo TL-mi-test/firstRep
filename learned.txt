@@ -15,7 +15,9 @@
 Spring Boot/flyway/gradleの連携
 ●gradle + flyway
 …flywayのmigrationタスクをgradleから実行
-　→タスクの起動自体は成功したが、タスクが途中でフリーズしてしまう現象を修正できず
 ●Spring Boot + gradle + flyway
 …Spring Bootでflywayのmigrationタスクを実行するアプリケーションの作成
-　→上記同様タスクが途中でフリーズしてしまう現象を修正できず
+　→いずれもmigrationタスクが途中でフリーズしてしまう現象が発生(on Windows VISTA + hsqldb)
+　→DBをhsqldbからMySQLに変更し、作成したスクリプト／アプリケーションが動作することを確認
+　※hsqldbで動作しなかった原因は現時点で不明だが、hsqldbの接続時のロック処理に起因する可能性が高いと思われる
+
